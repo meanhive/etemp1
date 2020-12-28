@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #eeeeee;
+}
+
+.container {
+    width: 50vw;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    height: 100vh;
+}
+
+.container .topbar {
+    width:100%;
+    padding:15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.home {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    background:url('https://raw.githubusercontent.com/ColorlibHQ/email-templates/master/1/images/bg_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding:25px;
+    margin: auto;
+    padding-top: 15%;
+    text-align: center;
+    color:#fff;
+    padding-bottom: 15%;
+}
+
+.content {
+}
+
+.home p {
+    line-height: 30px;
+    width:80%;
+    position:relative;
+    left:10%;
+}
+
+.home a {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding:14px 16px;
+    background-color: orange;
+    border-radius: 25px;
+    color:#fff;
+}

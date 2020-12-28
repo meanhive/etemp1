@@ -1,0 +1,153 @@
+/* variables for colors */
+:root {
+    --menu-bg: #5680e9;
+    --txt-light: #fff;
+    --txt-dark :#222;
+    --bg1: #8860d0;
+    --bg2: #5ab9ea;
+    --bg-light: #84ceeb;
+    --bg-thin:#c1c1c1;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu {
+    margin:0;
+    padding:0;
+    width:200px;
+    display: block;
+    background-color: var(--menu-bg);
+    height:100vh;
+    overflow: auto;
+    position: fixed;
+    top:0;
+}
+
+.menu .menu-right a{
+    display:block;
+    text-align: center;
+}
+
+.menu a {
+    color:var(--txt-light);
+    text-decoration: none;
+    padding:16px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color:var(--txt-dark);
+    font-weight: bold;
+}
+
+.menu .logo {
+    font-size: 2em;
+}
+
+.menu .menu-right {
+    position: relative;
+    top:20px;
+}
+
+#content {
+    margin-left: 220px;
+}
+
+@media screen and (max-width:768px) {
+    .menu {
+        width:100%;
+        height: auto;
+        position: relative;
+        display: flex;
+    }
+    
+
+    .menu .menu-right a {
+        display: inline-block;
+        padding:14px 16px;
+        float: left;
+    }
+
+    #content {
+        width:100%;
+        margin:0;
+        display: none;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .menu {
+        display: block;
+        height: auto;
+        padding:20px;
+        margin: 0;
+        position: relative;
+    }
+
+    .menu .menu-right a{
+        display: block;
+        float: none;
+    }
+}
+
+/* menu ends */
+
+/* loader style */
+    #loader {
+        width: 100px;
+        height: 100px;
+        position:absolute;
+        top:40%;
+        left:50%;
+        right:50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        border:15px solid var(--txt-light);
+        border-radius: 50%;
+        border-top: 15px solid var(--bg1);
+        border-bottom: 15px solid var(--bg2);
+        animation: rot 3s linear 0.2s infinite forwards;
+        -webkit-animation: rot 3s linear 0.2s infinite forwards;
+        -moz-animation: rot 3s linear 0.2s infinite forwards;
+        -o-animation: rot 3s linear 0.2s infinite forwards;
+    }
+
+
+    @keyframes rot {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @-webkit-keyframes rot {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @-moz-keyframes rot {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+/* loader style ends */
+
+
+/* page animation */
+
+.page-animation {
+    position: relative;
+    -webkit-animation: page 3s;
+    animation: page 3s;
+}
+
+@keyframes page {
+    from { bottom:-100px; opacity: 0; }
+    to { bottom:0px; opacity: 1; }
+}
+
+@-webkit-keyframes page {
+    from { bottom:-100px; opacity: 0; }
+    to { bottom:0px; opacity: 1; }
+}
+/* page animation ends */
